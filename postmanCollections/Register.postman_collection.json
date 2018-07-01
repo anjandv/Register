@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "d967f772-640a-4c8b-a04a-38c40c240289",
+		"name": "Register",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/employeeList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n{\n  \"id\": 2,\n  \"firstName\": \"Sachin\",\n  \"lastName\" : \"dv\",\n  \"designation\": \"Director\",\n  \"manager_id\": 1\n},\n{\n  \"id\": 3,\n  \"firstName\": \"jai\",\n  \"lastName\" : \"dv\",\n  \"designation\": \"Engineering Manager\",\n  \"manager_id\": 1\n},\n{\n  \"id\": 4,\n  \"firstName\": \"Abhi\",\n  \"lastName\" : \"dv\",\n  \"designation\": \"Product Manager\",\n  \"manager_id\": 3\n},\n{\n  \"id\": 5,\n  \"firstName\": \"Srini\",\n  \"lastName\" : \"dv\",\n  \"designation\": \"developer\",\n  \"manager_id\": 4\n},\n{\n  \"id\": 6,\n  \"firstName\": \"raghava\",\n  \"lastName\" : \"dv\",\n  \"designation\": \"Architect\",\n  \"manager_id\": 2\n}\n]"
+				},
+				"url": {
+					"raw": "localhost:8080/api/employeeList",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employeeList"
+					]
+				},
+				"description": "Adding employee list"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee"
+					]
+				},
+				"description": "Get Emoloyee list"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/employee/hierarchy/1006",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 1,\n        \"firstName\": \"Anjan\",\n        \"lastName\": \"dv\",\n        \"designation\": \"CEO\",\n        \"manager_id\": 0\n    }"
+				},
+				"url": {
+					"raw": "localhost:8080/api/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee"
+					]
+				},
+				"description": "To get the hierarchy of a particular employee by eid"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/employee/hierarchy/6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/employee/hierarchy/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"hierarchy",
+						"6"
+					]
+				},
+				"description": "Get hierarchy based on id"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/employee/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/employee/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"2"
+					]
+				},
+				"description": "Get employee by id"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/employee/2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"firstName\": \"Sachin\",\n    \"lastName\": \"R\",\n    \"designation\": \"Director\",\n    \"manager_id\": 1\n\t\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/employee/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"2"
+					]
+				},
+				"description": "Update an employee based on id"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/employee/7",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/employee/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"7"
+					]
+				},
+				"description": "Delete employee based on id"
+			},
+			"response": []
+		}
+	]
+}
