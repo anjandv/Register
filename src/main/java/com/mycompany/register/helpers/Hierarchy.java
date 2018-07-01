@@ -1,8 +1,6 @@
 package com.mycompany.register.helpers;
+
 import java.util.List;
-
-import org.springframework.stereotype.Component;
-
 import com.mycompanyname.register.model.Employee;
 
 public class Hierarchy {

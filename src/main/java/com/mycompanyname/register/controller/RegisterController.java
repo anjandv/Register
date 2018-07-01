@@ -89,7 +89,7 @@ public class RegisterController {
 	@GetMapping("/employee/hierarchy/{id}")
 	public String getHierarchy(@PathVariable(value = "id") Long empId) {
 
-		Employee employee = employeeRepository.findById(empId)
+		employeeRepository.findById(empId)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee", "id", empId));
 		List<Employee> emplist = new ArrayList<Employee>();
 		emplist = employeeRepository.findAll();
